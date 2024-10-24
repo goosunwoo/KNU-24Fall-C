@@ -17,7 +17,7 @@ int main(void){
         if(p.PID[a]==0) break;
         else if (rdpc(a)==1)continue;
         printf("상품명 : ");
-        scanf("%s",&p.PNM[a]);
+        scanf("%s",p.PNM[a]);
         printf("가격 : ");
         scanf("%d",&p.PPR[a]);
         a++;
