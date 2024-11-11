@@ -1,18 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct data
+{
+    
+};
+
+
 struct NODE
 {
     int data;
+    char name1[100];
     struct NODE* link;
 };
 
 struct NODE* head = NULL;
 
-struct NODE* create_node(int data1)
+struct NODE* create_node(int data1, char name)
 {
     struct NODE* new_node=(struct NODE*)malloc(sizeof(struct NODE));
     new_node -> data = data1;
+    new_node ->name1 = name;
     new_node -> link = NULL;
 
     return new_node;
@@ -44,9 +52,9 @@ void print_nodes(){
 int main(void){
     for (int i = 0; i < 4; i++)
     {
-        insert_node_last;//(create_node(i));
+        insert_node_last(create_node(i));
     }
-    print_nodes();
+    print_nodes;
     
     return 0;
 }
